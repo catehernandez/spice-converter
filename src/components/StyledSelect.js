@@ -7,7 +7,7 @@ const StyledSelect = styled.select`
   background-size: auto 14px;
   border: none;
   font: inherit;
-  width: min-content;
+  text-align: center;
 
   &:hover {
     cursor: pointer;
