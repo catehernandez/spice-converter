@@ -30,7 +30,6 @@ class App extends React.Component {
   };
 
   convertToGround = (event) => {
-    //set value of ground to = input / (ratio)
     let value = event.target.value;
 
     this.setState({
@@ -40,6 +39,15 @@ class App extends React.Component {
 
     console.log('whole units', this.state.wholeUnits);
     console.log('ground units', this.state.groundUnits);
+  };
+
+  convertToWhole = (event) => {
+    let value = event.target.value;
+
+    this.setState({
+      groundUnits: value,
+      wholeUnits: value / this.state.conversionRatio,
+    });
   };
 
   render() {
@@ -59,7 +67,7 @@ class App extends React.Component {
         <input
           name="groundUnits"
           type="number"
-          onChange={() => console.log('Hi')}
+          onChange={this.convertToWhole}
           value={this.state.groundUnits}
         />
       </main>
