@@ -3,6 +3,7 @@ import { WholeUnits, ConversionRatios } from './SpiceConfig';
 
 import StyledSelect from './components/StyledSelect';
 import { NumericalInput } from './components/StyledInput';
+import EqualSign from './components/EqualSign';
 
 class App extends React.Component {
   constructor(props) {
@@ -81,7 +82,7 @@ class App extends React.Component {
             {this.renderOptions()}
           </StyledSelect>
         </div>
-        <div> = </div>
+        <EqualSign />
         <div>
           <NumericalInput
             type="number"
