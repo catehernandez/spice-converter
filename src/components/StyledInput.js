@@ -5,6 +5,7 @@ const NumericalInput = styled.input`
   border: none;
   border-bottom: solid 1.5px #222;
   font: inherit;
+  margin: 0 0 1rem;
   text-align: center;
   width: 3em;
 
