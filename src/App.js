@@ -1,19 +1,13 @@
 import React from 'react';
+import { ConversionRatios } from './SpiceConfig';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
 
-    //whole-to-ground ratio
-    this.conversionRatios = {
-      allspice: 1,
-      blackPepper: 1 / 1.5,
-      cardamom: 2,
-    };
-
     this.state = {
       selectedSpice: 'allspice',
-      conversionRatio: this.conversionRatios['allspice'],
+      conversionRatio: ConversionRatios['allspice'],
       wholeUnits: 0,
       groundUnits: 0,
     };
@@ -25,8 +19,8 @@ class App extends React.Component {
     this.setState(
       {
         selectedSpice: value,
-        conversionRatio: this.conversionRatios[value],
-        groundUnits: this.state.wholeUnits / this.conversionRatios[value],
+        conversionRatio: ConversionRatios[value],
+        groundUnits: this.state.wholeUnits / ConversionRatios[value],
       },
       () => console.log('ratio', this.state.conversionRatio)
     );
