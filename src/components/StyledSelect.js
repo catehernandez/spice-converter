@@ -6,6 +6,7 @@ const StyledSelect = styled.select`
   background: url(${downArrow}) no-repeat right transparent;
   border: none;
   font: inherit;
+  width: min-content;
 
   &:hover {
     cursor: pointer;
