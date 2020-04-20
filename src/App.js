@@ -26,7 +26,7 @@ class App extends React.Component {
       {
         selectedSpice: value,
         conversionRatio: this.conversionRatios[value],
-        groundUnits: this.state.wholeUnits / this.state.conversionRatio,
+        groundUnits: this.state.wholeUnits / this.conversionRatios[value],
       },
       () => console.log('ratio', this.state.conversionRatio)
     );
