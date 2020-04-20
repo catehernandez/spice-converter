@@ -4,28 +4,28 @@ class App extends React.Component {
   constructor(props) {
     super(props);
 
+    //whole-to-ground ratio
+    this.conversionRatios = {
+      allspice: 1,
+      blackPepper: 1 / 1.5,
+      cardamom: 2,
+    };
+
     this.state = {
-      selectedSpice: '',
-      conversionRatio: 0,
+      selectedSpice: 'allspice',
+      conversionRatio: this.conversionRatios['allspice'],
       wholeUnits: 0,
       groundUnits: 0,
     };
   }
 
   selectSpice = (event) => {
-    //whole-to-ground ratio
-    const conversionRatios = {
-      allspice: 1,
-      blackPepper: 1 / 1.5,
-      cardamom: 2,
-    };
-
     let value = event.target.value;
 
     this.setState(
       {
         selectedSpice: value,
-        conversionRatio: conversionRatios[value],
+        conversionRatio: this.conversionRatios[value],
         groundUnits: this.state.wholeUnits * this.state.conversionRatio,
       },
       () => console.log('ratio', this.state.conversionRatio)
