@@ -1,6 +1,8 @@
 import React from 'react';
 import { WholeUnits, ConversionRatios } from './SpiceConfig';
 
+import StyledSelect from './components/StyledSelect';
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -68,9 +70,13 @@ class App extends React.Component {
           value={this.state.wholeUnits}
           min="0"
         />
-        <select value={this.state.selectedSpice} onChange={this.selectSpice}>
+
+        <StyledSelect
+          value={this.state.selectedSpice}
+          onChange={this.selectSpice}
+        >
           {this.renderOptions()}
-        </select>
+        </StyledSelect>
         <input
           type="number"
           onChange={this.convertToWhole}
