@@ -26,7 +26,7 @@ class App extends React.Component {
       {
         selectedSpice: value,
         conversionRatio: this.conversionRatios[value],
-        groundUnits: this.state.wholeUnits * this.state.conversionRatio,
+        groundUnits: this.state.wholeUnits / this.state.conversionRatio,
       },
       () => console.log('ratio', this.state.conversionRatio)
     );
@@ -37,7 +37,7 @@ class App extends React.Component {
 
     this.setState({
       wholeUnits: value,
-      groundUnits: value * this.state.conversionRatio,
+      groundUnits: value / this.state.conversionRatio,
     });
   };
 
@@ -46,7 +46,7 @@ class App extends React.Component {
 
     this.setState({
       groundUnits: value,
-      wholeUnits: value / this.state.conversionRatio,
+      wholeUnits: value * this.state.conversionRatio,
     });
   };
 
