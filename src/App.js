@@ -70,8 +70,9 @@ class App extends React.Component {
             type="number"
             onChange={this.convertToGround}
             value={this.state.wholeUnits}
-            max="50"
+            max="32"
             size="3"
+            step="0.25"
           />
           <br />
           <StyledSelect
@@ -88,8 +89,9 @@ class App extends React.Component {
             onChange={this.convertToWhole}
             value={this.state.groundUnits}
             min="0"
-            max="50"
+            max="32"
             size="3"
+            step="0.25"
           />
         </div>
         <div>tsp ground {this.state.selectedSpice}</div>
