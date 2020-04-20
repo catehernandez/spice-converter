@@ -64,25 +64,31 @@ class App extends React.Component {
   render() {
     return (
       <main>
-        <input
-          type="number"
-          onChange={this.convertToGround}
-          value={this.state.wholeUnits}
-          min="0"
-        />
-
-        <StyledSelect
-          value={this.state.selectedSpice}
-          onChange={this.selectSpice}
-        >
-          {this.renderOptions()}
-        </StyledSelect>
-        <input
-          type="number"
-          onChange={this.convertToWhole}
-          value={this.state.groundUnits}
-          min="0"
-        />
+        <div>
+          <input
+            type="number"
+            onChange={this.convertToGround}
+            value={this.state.wholeUnits}
+            min="0"
+          />
+          <br />
+          <StyledSelect
+            value={this.state.selectedSpice}
+            onChange={this.selectSpice}
+          >
+            {this.renderOptions()}
+          </StyledSelect>
+        </div>
+        <div> = </div>
+        <div>
+          <input
+            type="number"
+            onChange={this.convertToWhole}
+            value={this.state.groundUnits}
+            min="0"
+          />
+        </div>
+        <div>tsp ground {this.state.selectedSpice}</div>
       </main>
     );
   }
