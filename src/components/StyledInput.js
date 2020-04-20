@@ -7,7 +7,9 @@ const NumericalInput = styled.input`
   font: inherit;
   padding-bottom: 2px;
   text-align: center;
+  width: 3em;
 
+  /* Remove numerical spinner */
   &::-webkit-inner-spin-button,
   &::-webkit-outer-spin-button {
     appearance: none;

@@ -70,8 +70,7 @@ class App extends React.Component {
             type="number"
             onChange={this.convertToGround}
             value={this.state.wholeUnits}
-            max="32"
-            size="3"
+            max="30"
             step="0.25"
           />
           <br />
@@ -89,8 +88,7 @@ class App extends React.Component {
             onChange={this.convertToWhole}
             value={this.state.groundUnits}
             min="0"
-            max="32"
-            size="3"
+            max="30"
             step="0.25"
           />
         </div>
