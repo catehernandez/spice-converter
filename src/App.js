@@ -2,6 +2,7 @@ import React from 'react';
 import { WholeUnits, ConversionRatios } from './SpiceConfig';
 
 import StyledSelect from './components/StyledSelect';
+import { NumericalInput } from './components/StyledInput';
 
 class App extends React.Component {
   constructor(props) {
@@ -65,11 +66,12 @@ class App extends React.Component {
     return (
       <main>
         <div>
-          <input
+          <NumericalInput
             type="number"
             onChange={this.convertToGround}
             value={this.state.wholeUnits}
-            min="0"
+            max="50"
+            size="3"
           />
           <br />
           <StyledSelect
@@ -81,11 +83,13 @@ class App extends React.Component {
         </div>
         <div> = </div>
         <div>
-          <input
+          <NumericalInput
             type="number"
             onChange={this.convertToWhole}
             value={this.state.groundUnits}
             min="0"
+            max="50"
+            size="3"
           />
         </div>
         <div>tsp ground {this.state.selectedSpice}</div>
