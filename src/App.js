@@ -20,13 +20,16 @@ class App extends React.Component {
       cardamom: 2,
     };
 
-    this.setState({
-      selectedSpice: event.target.value,
-      conversionRatio: conversionRatios[event.target.value],
-    });
+    let value = event.target.value;
 
-    //console.log('spice', this.state.selectedSpice);
-    //console.log('ratio', this.state.conversionRatio);
+    this.setState(
+      {
+        selectedSpice: value,
+        conversionRatio: conversionRatios[value],
+        groundUnits: this.state.wholeUnits * this.state.conversionRatio,
+      },
+      () => console.log('ratio', this.state.conversionRatio)
+    );
   };
 
   convertToGround = (event) => {
@@ -36,9 +39,6 @@ class App extends React.Component {
       wholeUnits: value,
       groundUnits: value * this.state.conversionRatio,
     });
-
-    console.log('whole units', this.state.wholeUnits);
-    console.log('ground units', this.state.groundUnits);
   };
 
   convertToWhole = (event) => {
