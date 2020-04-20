@@ -63,7 +63,6 @@ class App extends React.Component {
     return (
       <main>
         <input
-          name="wholeUnits"
           type="number"
           onChange={this.convertToGround}
           value={this.state.wholeUnits}
@@ -72,7 +71,6 @@ class App extends React.Component {
           {this.renderOptions()}
         </select>
         <input
-          name="groundUnits"
           type="number"
           onChange={this.convertToWhole}
           value={this.state.groundUnits}
