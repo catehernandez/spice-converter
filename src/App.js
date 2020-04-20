@@ -66,6 +66,7 @@ class App extends React.Component {
           type="number"
           onChange={this.convertToGround}
           value={this.state.wholeUnits}
+          min="0"
         />
         <select value={this.state.selectedSpice} onChange={this.selectSpice}>
           {this.renderOptions()}
@@ -74,6 +75,7 @@ class App extends React.Component {
           type="number"
           onChange={this.convertToWhole}
           value={this.state.groundUnits}
+          min="0"
         />
       </main>
     );
