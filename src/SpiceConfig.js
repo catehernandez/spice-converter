@@ -5,4 +5,10 @@ const ConversionRatios = {
   cardamom: 2,
 };
 
-export { ConversionRatios };
+const WholeUnits = {
+  allspice: 'allspice berries',
+  blackPepper: 'black peppercorns',
+  cardamom: 'cardamom pods, dehusked',
+};
+
+export { ConversionRatios, WholeUnits };

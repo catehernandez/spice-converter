@@ -1,5 +1,5 @@
 import React from 'react';
-import { ConversionRatios } from './SpiceConfig';
+import { WholeUnits, ConversionRatios } from './SpiceConfig';
 
 class App extends React.Component {
   constructor(props) {
@@ -44,6 +44,21 @@ class App extends React.Component {
     });
   };
 
+  renderOptions = () => {
+    let spices = Object.keys(WholeUnits);
+
+    const options = spices.map(
+      (spice) => (
+        <option key={spice} value={spice}>
+          {WholeUnits[spice]}
+        </option>
+      )
+      //console.log(WholeUnits[spice])
+    );
+
+    return options;
+  };
+
   render() {
     return (
       <main>
@@ -54,9 +69,7 @@ class App extends React.Component {
           value={this.state.wholeUnits}
         />
         <select value={this.state.selectedSpice} onChange={this.selectSpice}>
-          <option value="allspice">berries</option>
-          <option value="blackPepper">peppercorns</option>
-          <option value="cardamom">pods</option>
+          {this.renderOptions()}
         </select>
         <input
           name="groundUnits"
