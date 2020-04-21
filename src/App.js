@@ -2,7 +2,7 @@ import React from 'react';
 import { WholeUnits, ConversionRatios } from './SpiceConfig';
 
 //import StyledSelect from './components/StyledSelect';
-import Select from 'react-select';
+import Select, { NonceProvider } from 'react-select';
 import { NumericalInput } from './components/StyledInput';
 import EqualSign from './components/EqualSign';
 
@@ -54,6 +54,21 @@ class App extends React.Component {
       label: `${WholeUnits[spice]}`,
     }));
 
+    //see react-select docs for properties
+    const customSelectStyles = {
+      control: (provided) => ({
+        ...provided,
+        border: 'none',
+      }),
+      dropdownIndicator: (provided) => ({
+        ...provided,
+        color: '#555',
+      }),
+      indicatorSeparator: () => ({
+        display: 'none',
+      }),
+    };
+
     return (
       <main>
         <div>
@@ -64,7 +79,11 @@ class App extends React.Component {
             step="0.25"
           />
           <br />
-          <Select onChange={this.selectSpice} options={options}></Select>
+          <Select
+            styles={customSelectStyles}
+            onChange={this.selectSpice}
+            options={options}
+          ></Select>
         </div>
         <EqualSign />
         <div>
