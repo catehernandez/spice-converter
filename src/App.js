@@ -21,14 +21,11 @@ class App extends React.Component {
   selectSpice = (selectedOption) => {
     let { value } = selectedOption;
 
-    this.setState(
-      {
-        selectedSpice: value,
-        conversionRatio: ConversionRatios[value],
-        groundUnits: this.state.wholeUnits / ConversionRatios[value],
-      },
-      () => console.log(`selected spice: ${this.state.selectedSpice}`)
-    );
+    this.setState({
+      selectedSpice: value,
+      conversionRatio: ConversionRatios[value],
+      groundUnits: this.state.wholeUnits / ConversionRatios[value],
+    });
   };
 
   convertToGround = (event) => {
@@ -47,21 +44,6 @@ class App extends React.Component {
       groundUnits: value,
       wholeUnits: value * this.state.conversionRatio,
     });
-  };
-
-  renderOptions = () => {
-    let spices = Object.keys(WholeUnits);
-
-    const options = spices.map(
-      (spice) => (
-        <option key={spice} value={spice}>
-          {WholeUnits[spice]}
-        </option>
-      )
-      //console.log(WholeUnits[spice])
-    );
-
-    return options;
   };
 
   render() {
