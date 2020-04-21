@@ -67,6 +67,9 @@ class App extends React.Component {
       indicatorSeparator: () => ({
         display: 'none',
       }),
+      singleValue: () => ({
+        width: 'auto',
+      }),
     };
 
     return (
