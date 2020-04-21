@@ -1,7 +1,8 @@
 import React from 'react';
 import { WholeUnits, ConversionRatios } from './SpiceConfig';
 
-import StyledSelect from './components/StyledSelect';
+//import StyledSelect from './components/StyledSelect';
+import Select from 'react-select';
 import { NumericalInput } from './components/StyledInput';
 import EqualSign from './components/EqualSign';
 
@@ -10,15 +11,15 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      selectedSpice: 'allspice',
-      conversionRatio: ConversionRatios['allspice'],
+      selectedSpice: '',
+      conversionRatio: 0,
       wholeUnits: 0,
       groundUnits: 0,
     };
   }
 
-  selectSpice = (event) => {
-    let value = event.target.value;
+  selectSpice = (selectedOption) => {
+    let { value } = selectedOption;
 
     this.setState(
       {
@@ -26,7 +27,7 @@ class App extends React.Component {
         conversionRatio: ConversionRatios[value],
         groundUnits: this.state.wholeUnits / ConversionRatios[value],
       },
-      () => console.log('ratio', this.state.conversionRatio)
+      () => console.log(`selected spice: ${this.state.selectedSpice}`)
     );
   };
 
@@ -64,6 +65,13 @@ class App extends React.Component {
   };
 
   render() {
+    let spices = Object.keys(WholeUnits);
+
+    const options = spices.map((spice) => ({
+      value: `${spice}`,
+      label: `${WholeUnits[spice]}`,
+    }));
+
     return (
       <main>
         <div>
@@ -74,12 +82,11 @@ class App extends React.Component {
             step="0.25"
           />
           <br />
-          <StyledSelect
+          <Select
             value={this.state.selectedSpice}
             onChange={this.selectSpice}
-          >
-            {this.renderOptions()}
-          </StyledSelect>
+            options={options}
+          ></Select>
         </div>
         <EqualSign />
         <div>
