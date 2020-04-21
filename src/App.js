@@ -2,7 +2,7 @@ import React from 'react';
 import { WholeUnits, ConversionRatios } from './SpiceConfig';
 
 //import StyledSelect from './components/StyledSelect';
-import Select, { NonceProvider } from 'react-select';
+import Select from 'react-select';
 import { NumericalInput } from './components/StyledInput';
 import EqualSign from './components/EqualSign';
 
