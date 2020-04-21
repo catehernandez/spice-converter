@@ -82,11 +82,7 @@ class App extends React.Component {
             step="0.25"
           />
           <br />
-          <Select
-            value={this.state.selectedSpice}
-            onChange={this.selectSpice}
-            options={options}
-          ></Select>
+          <Select onChange={this.selectSpice} options={options}></Select>
         </div>
         <EqualSign />
         <div>
