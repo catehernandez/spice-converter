@@ -3,6 +3,7 @@ import Select from 'react-select';
 import customSelectStyles from 'shared/CustomSelectStyles';
 
 import { Spices, WholeUnits, ConversionRatios } from './SpiceConfig';
+import { roundToPrecision } from './utils';
 
 // Styles
 import { NumericalInput } from 'shared/StyledInput';
@@ -24,21 +25,27 @@ class App extends React.Component {
   selectSpice = (selectedOption) => {
     const selectedSpice = selectedOption.value;
     const conversionRatio = ConversionRatios[selectedSpice];
-    const groundAmount = this.state.wholeAmount / conversionRatio;
+
+    let groundAmount = this.state.wholeAmount / conversionRatio;
+    groundAmount = roundToPrecision(groundAmount, 0.25);
 
     this.setState({ selectedSpice, conversionRatio, groundAmount });
   };
 
   convertToGround = (event) => {
     const wholeAmount = event.target.value;
-    const groundAmount = wholeAmount / this.state.conversionRatio;
+
+    let groundAmount = wholeAmount / this.state.conversionRatio;
+    groundAmount = roundToPrecision(groundAmount, 0.25);
 
     this.setState({ wholeAmount, groundAmount });
   };
 
   convertToWhole = (event) => {
     const groundAmount = event.target.value;
-    const wholeAmount = groundAmount * this.state.conversionRatio;
+
+    let wholeAmount = groundAmount * this.state.conversionRatio;
+    wholeAmount = roundToPrecision(wholeAmount, 0.25);
 
     this.setState({ groundAmount, wholeAmount });
   };
