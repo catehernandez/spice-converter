@@ -79,6 +79,10 @@ class App extends React.Component {
       singleValue: () => ({
         width: 'auto',
       }),
+      valueContainer: (provided) => ({
+        ...provided,
+        paddingRight: 0,
+      }),
     };
 
     return (
