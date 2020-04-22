@@ -26,6 +26,7 @@ const customSelectStyles = {
   valueContainer: (provided) => ({
     ...provided,
     paddingRight: 0,
+    paddingLeft: 0,
   }),
 };
 

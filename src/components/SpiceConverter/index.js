@@ -3,8 +3,11 @@ import Select from 'react-select';
 import customSelectStyles from 'shared/CustomSelectStyles';
 
 import { Spices, WholeUnits, ConversionRatios } from './SpiceConfig';
+
+// Styles
 import { NumericalInput } from 'shared/StyledInput';
 import EqualSign from './EqualSign';
+import Container from './Container';
 
 class App extends React.Component {
   constructor(props) {
@@ -53,7 +56,7 @@ class App extends React.Component {
     }));
 
     return (
-      <React.Fragment>
+      <Container className="spice-converter-container">
         <NumericalInput
           type="number"
           onChange={this.convertToGround}
@@ -74,7 +77,7 @@ class App extends React.Component {
           step="0.25"
         />
         <div>tsp ground {this.state.selectedSpice}</div>
-      </React.Fragment>
+      </Container>
     );
   }
 }
