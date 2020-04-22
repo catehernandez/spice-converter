@@ -56,10 +56,11 @@ class App extends React.Component {
 
     //see react-select docs for properties
     const customSelectStyles = {
-      control: (provided) => ({
+      control: (provided, prop) => ({
         ...provided,
         backgroundColor: 'none',
         border: 'none',
+        boxShadow: 'none',
         minWidth: 115,
       }),
       dropdownIndicator: (provided) => ({
@@ -68,6 +69,12 @@ class App extends React.Component {
       }),
       indicatorSeparator: () => ({
         display: 'none',
+      }),
+      option: (provided, state, theme) => ({
+        ...provided,
+        display: state.isSelected ? 'none' : 'block',
+        backgroundColor: state.isFocused ? 'aliceblue' : 'transparent',
+        color: 'inherit',
       }),
       singleValue: () => ({
         width: 'auto',
