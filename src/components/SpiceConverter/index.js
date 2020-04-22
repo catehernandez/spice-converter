@@ -16,37 +16,31 @@ class App extends React.Component {
     this.state = {
       selectedSpice: '',
       conversionRatio: 0,
-      wholeUnits: 0,
-      groundUnits: 0,
+      wholeAmount: 0,
+      groundAmount: 0,
     };
   }
 
   selectSpice = (selectedOption) => {
-    let { value } = selectedOption;
+    const selectedSpice = selectedOption.value;
+    const conversionRatio = ConversionRatios[selectedSpice];
+    const groundAmount = this.state.wholeAmount / conversionRatio;
 
-    this.setState({
-      selectedSpice: value,
-      conversionRatio: ConversionRatios[value],
-      groundUnits: this.state.wholeUnits / ConversionRatios[value],
-    });
+    this.setState({ selectedSpice, conversionRatio, groundAmount });
   };
 
   convertToGround = (event) => {
-    let value = event.target.value;
+    const wholeAmount = event.target.value;
+    const groundAmount = wholeAmount / this.state.conversionRatio;
 
-    this.setState({
-      wholeUnits: value,
-      groundUnits: value / this.state.conversionRatio,
-    });
+    this.setState({ wholeAmount, groundAmount });
   };
 
   convertToWhole = (event) => {
-    let value = event.target.value;
+    const groundAmount = event.target.value;
+    const wholeAmount = groundAmount * this.state.conversionRatio;
 
-    this.setState({
-      groundUnits: value,
-      wholeUnits: value * this.state.conversionRatio,
-    });
+    this.setState({ groundAmount, wholeAmount });
   };
 
   render() {
@@ -60,7 +54,7 @@ class App extends React.Component {
         <NumericalInput
           type="number"
           onChange={this.convertToGround}
-          value={this.state.wholeUnits}
+          value={this.state.wholeAmount}
           step="0.25"
         />
         <br />
@@ -73,7 +67,7 @@ class App extends React.Component {
         <NumericalInput
           type="number"
           onChange={this.convertToWhole}
-          value={this.state.groundUnits}
+          value={this.state.groundAmount}
           step="0.25"
         />
         <div>tsp ground {this.state.selectedSpice}</div>
