@@ -4,9 +4,17 @@ const SpiceConfig = {
     conversionRatio: 1,
     wholeUnits: 'tsp allspice berries',
   },
+  aniseed: {
+    conversionRatio: 1,
+    wholeUnits: 'tsp aniseed',
+  },
   'black pepper': {
     conversionRatio: 1 / 1.5,
     wholeUnits: 'tsp black peppercorns',
+  },
+  caraway: {
+    conversionRatio: 1,
+    wholeUnits: 'tsp caraway seeds',
   },
   cardamom: {
     conversionRatio: 12 / 1,
@@ -32,13 +40,21 @@ const SpiceConfig = {
     conversionRatio: 1 / 1.25,
     wholeUnits: 'tsp fennel seeds',
   },
-  nutmeg: {
-    conversionRatio: 1 / 2,
-    wholeUnits: 'nutmeg',
+  juniper: {
+    conversionRatio: 1,
+    wholeUnits: 'tsp juniper berries',
   },
   mustard: {
     conversionRatio: 1 / 1.5,
     wholeUnits: 'tsp mustard seeds',
+  },
+  nutmeg: {
+    conversionRatio: 1 / 2,
+    wholeUnits: 'nutmeg',
+  },
+  'sichuan pepper': {
+    conversionRatio: 3 / 2.75,
+    wholeUnits: 'tsp sichuan peppercorns',
   },
 };
 
