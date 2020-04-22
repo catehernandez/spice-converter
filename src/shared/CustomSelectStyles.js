@@ -1,11 +1,15 @@
 //see react-select docs for properties
 const customSelectStyles = {
-  control: (provided, prop) => ({
+  control: (provided) => ({
     ...provided,
     backgroundColor: 'none',
     border: 'none',
     boxShadow: 'none',
     minWidth: 115,
+
+    '&:hover': {
+      cursor: 'pointer',
+    },
   }),
   dropdownIndicator: (provided) => ({
     ...provided,
@@ -19,6 +23,10 @@ const customSelectStyles = {
     display: state.isSelected ? 'none' : 'block',
     backgroundColor: state.isFocused ? 'aliceblue' : 'transparent',
     color: 'inherit',
+
+    '&:hover': {
+      cursor: 'pointer',
+    },
   }),
   singleValue: () => ({
     width: 'auto',
