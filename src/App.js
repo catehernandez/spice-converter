@@ -1,5 +1,5 @@
 import React from 'react';
-import { WholeUnits, ConversionRatios } from './SpiceConfig';
+import { Spices, WholeUnits, ConversionRatios } from './SpiceConfig';
 
 //import StyledSelect from './components/StyledSelect';
 import Select from 'react-select';
@@ -48,9 +48,7 @@ class App extends React.Component {
   };
 
   render() {
-    let spices = Object.keys(WholeUnits);
-
-    const options = spices.map((spice) => ({
+    const options = Spices.map((spice) => ({
       value: `${spice}`,
       label: `${WholeUnits[spice]}`,
     }));
