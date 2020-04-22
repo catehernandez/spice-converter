@@ -2,7 +2,7 @@ import React from 'react';
 import { WholeUnits, ConversionRatios } from './SpiceConfig';
 
 //import StyledSelect from './components/StyledSelect';
-import Select, { NonceProvider } from 'react-select';
+import Select from 'react-select';
 import { NumericalInput } from './components/StyledInput';
 import EqualSign from './components/EqualSign';
 
@@ -56,10 +56,11 @@ class App extends React.Component {
 
     //see react-select docs for properties
     const customSelectStyles = {
-      control: (provided, state) => ({
+      control: (provided) => ({
         ...provided,
         backgroundColor: 'none',
         border: 'none',
+        minWidth: 115,
       }),
       dropdownIndicator: (provided) => ({
         ...provided,
