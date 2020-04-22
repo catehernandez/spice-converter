@@ -5,6 +5,7 @@ import { WholeUnits, ConversionRatios } from './SpiceConfig';
 import Select from 'react-select';
 import { NumericalInput } from './components/StyledInput';
 import EqualSign from './components/EqualSign';
+import customSelectStyles from './styles/CustomSelectStyles';
 
 class App extends React.Component {
   constructor(props) {
@@ -53,37 +54,6 @@ class App extends React.Component {
       value: `${spice}`,
       label: `${WholeUnits[spice]}`,
     }));
-
-    //see react-select docs for properties
-    const customSelectStyles = {
-      control: (provided, prop) => ({
-        ...provided,
-        backgroundColor: 'none',
-        border: 'none',
-        boxShadow: 'none',
-        minWidth: 115,
-      }),
-      dropdownIndicator: (provided) => ({
-        ...provided,
-        color: '#555',
-      }),
-      indicatorSeparator: () => ({
-        display: 'none',
-      }),
-      option: (provided, state, theme) => ({
-        ...provided,
-        display: state.isSelected ? 'none' : 'block',
-        backgroundColor: state.isFocused ? 'aliceblue' : 'transparent',
-        color: 'inherit',
-      }),
-      singleValue: () => ({
-        width: 'auto',
-      }),
-      valueContainer: (provided) => ({
-        ...provided,
-        paddingRight: 0,
-      }),
-    };
 
     return (
       <main>
