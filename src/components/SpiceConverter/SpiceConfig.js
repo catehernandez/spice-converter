@@ -4,7 +4,7 @@ const SpiceConfig = {
     conversionRatio: 1,
     wholeUnits: 'tsp allspice berries',
   },
-  blackPepper: {
+  'black pepper': {
     conversionRatio: 1 / 1.5,
     wholeUnits: 'tsp black peppercorns',
   },
