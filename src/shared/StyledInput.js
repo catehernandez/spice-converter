@@ -4,7 +4,7 @@ const NumericalInput = styled.input`
   appearance: none;
   background-color: transparent;
   border: none;
-  border-bottom: solid 1.5px #222;
+  border-bottom: solid 1.5px;
   font: inherit;
   margin: 1rem;
   text-align: center;

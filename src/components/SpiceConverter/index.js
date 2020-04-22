@@ -10,7 +10,7 @@ import { NumericalInput } from 'shared/StyledInput';
 import EqualSign from './EqualSign';
 import Container from './Container';
 
-class App extends React.Component {
+class SpiceConverter extends React.Component {
   constructor(props) {
     super(props);
 
@@ -59,6 +59,7 @@ class App extends React.Component {
     return (
       <Container className="spice-converter-container">
         <NumericalInput
+          disabled={this.state.selectedSpice === '' ? true : false}
           type="number"
           onChange={this.convertToGround}
           value={this.state.wholeAmount}
@@ -72,6 +73,7 @@ class App extends React.Component {
         ></Select>
         <EqualSign />
         <NumericalInput
+          disabled={this.state.selectedSpice === '' ? true : false}
           type="number"
           onChange={this.convertToWhole}
           value={this.state.groundAmount}
@@ -83,4 +85,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default SpiceConverter;
