@@ -18,6 +18,12 @@ const NumericalInput = styled.input`
   }
 
   -moz-appearance: textfield;
+
+  ${(props) =>
+    props.disabled &&
+    `
+    color: #EBEBE4
+  `}
 `;
 
 export { NumericalInput };
