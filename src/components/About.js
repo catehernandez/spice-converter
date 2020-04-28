@@ -3,22 +3,27 @@ import styled from 'styled-components';
 
 const AboutButton = styled.button`
   background-color: transparent;
-  border: none;
+  color: #222;
   cursor: pointer;
-  font: inherit;
+  border: none;
+  border-bottom: 2px solid hsl(101.2, 20%, 50%);
+  font: 500 1.1rem 'Lora', serif;
+  padding: 0;
   text-align: left;
 `;
 
 const AboutContent = styled.div`
-  background-color: #efefef;
   height: 0;
+  padding-top: 1.1rem;
   visibility: hidden;
+  width: 0;
 
   ${(props) =>
     props.show &&
     `
   visibility: visible;
   height: auto;
+  width: auto;
   `}
 `;
 
@@ -26,8 +31,8 @@ const About = () => {
   const [showAbout, toggleAbout] = useState(false);
 
   return (
-    <AboutButton onClick={() => toggleAbout(!showAbout)}>
-      About
+    <React.Fragment>
+      <AboutButton onClick={() => toggleAbout(!showAbout)}>ABOUT</AboutButton>
       <AboutContent show={showAbout ? true : false}>
         Spice data from{' '}
         <a href="https://food52.com/blog/15413-how-to-convert-whole-spices-to-ground-measurements">
@@ -48,7 +53,7 @@ const About = () => {
         </a>
         .
       </AboutContent>
-    </AboutButton>
+    </React.Fragment>
   );
 };
 
