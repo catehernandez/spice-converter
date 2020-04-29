@@ -11,10 +11,15 @@ const Main = styled.main`
   justify-content: center;
 `;
 
+const AppHeader = ` 
+  align-items: center;
+`;
+
 const App = () => {
   return (
     <React.Fragment>
       <Navbar />
+      <h1>Spice Converter</h1>
       <Main>
         <SpiceConverter />
       </Main>

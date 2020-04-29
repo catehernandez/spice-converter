@@ -7,7 +7,6 @@ const AboutButton = styled.button`
   cursor: pointer;
   border: none;
   border-bottom: 2px solid hsl(101.2, 20%, 50%);
-  font: 500 1.1rem 'Lora', serif;
   padding: 0;
   text-align: left;
 `;
