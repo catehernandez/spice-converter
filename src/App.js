@@ -7,19 +7,27 @@ import SpiceConverter from './components/SpiceConverter';
 const Main = styled.main`
   display: flex;
   align-items: center;
-  height: 100vh;
   justify-content: center;
 `;
 
-const AppHeader = ` 
-  align-items: center;
+const AppHeader = styled.div`
+  text-align: center;
+  width: 100%;
+`;
+
+const Tagline = styled.div`
+  font-size: 0.85rem;
 `;
 
 const App = () => {
   return (
     <React.Fragment>
-      <Navbar />
-      <h1>Spice Converter</h1>
+      <AppHeader>
+        <h1>Spice Converter</h1>
+        <Tagline>
+          I'll help you convert whole spices to ground and vice versa
+        </Tagline>
+      </AppHeader>
       <Main>
         <SpiceConverter />
       </Main>
