@@ -18,6 +18,10 @@ const AppHeader = styled.header`
   max-width: 75%;
 `;
 
+const AppTitle = styled.h1`
+  margin-bottom: 1rem;
+`;
+
 const Tagline = styled.div`
   font-size: 0.85rem;
 `;
@@ -33,7 +37,7 @@ const App = () => {
   return (
     <AppWrapper>
       <AppHeader>
-        <h1>Spice Converter</h1>
+        <AppTitle>Spice Converter</AppTitle>
         <Tagline>
           I'll help you convert whole spices to ground and vice versa
         </Tagline>
