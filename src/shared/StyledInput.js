@@ -9,6 +9,7 @@ const NumericalInput = styled.input`
   margin: 1rem;
   text-align: center;
   width: 3em;
+  transition: border 200ms;
 
   /* Remove numerical spinner */
   &::-webkit-inner-spin-button,
@@ -18,6 +19,10 @@ const NumericalInput = styled.input`
   }
 
   -moz-appearance: textfield;
+
+  &:focus {
+    border-color: hsl(35, 100%, 50%);
+  }
 
   ${(props) =>
     props.disabled &&
