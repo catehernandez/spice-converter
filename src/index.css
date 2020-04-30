@@ -32,3 +32,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   width: 100%;
 }
+
+/** Alternate option: 
+ * background: hsl(43, 95.4%, 66.1%);
+ */
+::selection {
+  background: hsl(35, 100%, 74.1%);
+}
