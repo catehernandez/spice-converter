@@ -8,13 +8,14 @@ const AppWrapper = styled.div`
   display: flex;
   flex-direction: column;
   height: 100vh;
+  overflow: hidden;
 `;
 
 const AppHeader = styled.header`
   flex: 0 1 auto;
-  margin-top: 1.5rem;
+  margin: 1.5rem auto 0;
   text-align: center;
-  width: 100%;
+  max-width: 75%;
 `;
 
 const Tagline = styled.div`
