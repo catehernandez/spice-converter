@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
   font-size: 2rem;
-  padding: 1rem;
+  margin: 1rem;
 `;
 
 const EqualSign = () => {

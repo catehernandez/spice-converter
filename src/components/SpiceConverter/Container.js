@@ -4,9 +4,8 @@ const Container = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   text-align: center;
-  padding-bottom: 12%;
+  width: fit-content;
 
   @media (min-width: 768px) {
     flex-direction: row;

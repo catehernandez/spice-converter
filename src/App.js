@@ -23,12 +23,9 @@ const Tagline = styled.div`
 `;
 
 const Main = styled.main`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  text-align: center;
   flex: 1 1 auto;
+  max-width: 95%;
+  margin: 0 auto;
 `;
 
 const App = () => {
