@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import SpiceConverter from './components/SpiceConverter';
 
 const AppWrapper = styled.div`
@@ -45,6 +45,7 @@ const App = () => {
       <Main>
         <SpiceConverter />
       </Main>
+      <Footer />
     </AppWrapper>
   );
 };
