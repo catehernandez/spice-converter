@@ -22,6 +22,15 @@ a {
   font-style: italic;
   letter-spacing: 1px;
   text-decoration: none;
+  transition: color 200ms;
+}
+
+a:visited {
+  color: #222;
+}
+
+a:hover {
+  color: hsl(35, 100%, 50%);
 }
 
 body {
