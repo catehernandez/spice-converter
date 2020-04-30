@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Contact from './Contact';
+
 const FooterWrapper = styled.footer`
   margin: 1.5rem;
   font-size: 0.75rem;
@@ -27,6 +29,7 @@ const Footer = () => {
         www.flaticon.com
       </a>
       .
+      <Contact />
     </FooterWrapper>
   );
 };
