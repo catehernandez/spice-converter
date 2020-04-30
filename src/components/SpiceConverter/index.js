@@ -6,7 +6,7 @@ import { Spices, WholeUnits, ConversionRatios } from './SpiceConfig';
 import { roundToPrecision } from './utils';
 
 // Styles
-import { NumericalInput } from 'shared/StyledInput';
+import NumericalInput from 'shared/NumericalInput';
 import EqualSign from './EqualSign';
 import Container from './Container';
 

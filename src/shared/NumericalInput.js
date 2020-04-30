@@ -31,4 +31,4 @@ const NumericalInput = styled.input`
   `}
 `;
 
-export { NumericalInput };
+export default NumericalInput;
