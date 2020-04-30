@@ -2,17 +2,19 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  float: right;
-
   & a {
     font-weight: 700;
+  }
+
+  @media (min-width: 768px) {
+    float: right;
   }
 `;
 
 const Contact = () => {
   return (
     <Wrapper>
-      made by <a href="https://github.com/zenon21/">C.H.</a>
+      Made by <a href="https://github.com/zenon21/">C.H.</a>
     </Wrapper>
   );
 };
