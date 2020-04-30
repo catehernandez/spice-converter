@@ -5,12 +5,14 @@ html {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.6em;
+  width: 100%;
 }
 
 h1 {
   font-family: 'Libre Baskerville', serif;
   font-weight: 700;
   font-size: 3rem;
+  line-height: 1.2em;
 }
 
 body {
