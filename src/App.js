@@ -28,9 +28,6 @@ const Tagline = styled.div`
 
 const Main = styled.main`
   flex: 1 1 auto;
-  height: 100%;
-  margin: 0 auto;
-  max-width: 95%;
 `;
 
 const App = () => {
