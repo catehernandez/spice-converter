@@ -5,6 +5,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin-top: 33%;
   width: fit-content;
 
   @media (min-width: 768px) {
