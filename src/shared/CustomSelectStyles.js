@@ -1,4 +1,6 @@
-//see react-select docs for properties
+/** customStyles for Select element from reac-select
+ * See react-select docs for more options
+ */
 const customSelectStyles = {
   control: (provided) => ({
     ...provided,

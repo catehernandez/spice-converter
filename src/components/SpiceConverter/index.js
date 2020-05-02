@@ -7,8 +7,7 @@ import { roundToPrecision } from './utils';
 
 // Styles
 import NumericalInput from 'shared/NumericalInput';
-import EqualSign from './EqualSign';
-import Container from './Container';
+import { SpiceConverterContainer, EqualWrapper } from './style';
 
 class SpiceConverter extends React.Component {
   constructor(props) {
@@ -57,7 +56,7 @@ class SpiceConverter extends React.Component {
     }));
 
     return (
-      <Container className="spice-converter-container">
+      <SpiceConverterContainer className="spice-converter-container">
         <NumericalInput
           disabled={this.state.selectedSpice === '' ? true : false}
           type="number"
@@ -71,7 +70,7 @@ class SpiceConverter extends React.Component {
           onChange={this.selectSpice}
           options={options}
         ></Select>
-        <EqualSign />
+        <EqualWrapper>=</EqualWrapper>
         <NumericalInput
           disabled={this.state.selectedSpice === '' ? true : false}
           type="number"
@@ -80,7 +79,7 @@ class SpiceConverter extends React.Component {
           step="0.25"
         />
         <div>tsp ground {this.state.selectedSpice}</div>
-      </Container>
+      </SpiceConverterContainer>
     );
   }
 }

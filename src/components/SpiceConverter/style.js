@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Container = styled.div`
+export const SpiceConverterContainer = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -16,4 +16,7 @@ const Container = styled.div`
   }
 `;
 
-export default Container;
+export const EqualWrapper = styled.div`
+  font-size: 2rem;
+  margin: 1rem;
+`;
