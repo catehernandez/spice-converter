@@ -56,8 +56,9 @@ class SpiceConverter extends React.Component {
     }));
 
     return (
-      <SpiceConverterContainer className="spice-converter-container">
+      <SpiceConverterContainer className="spice-converter">
         <NumericalInput
+          className="whole-input"
           disabled={this.state.selectedSpice === '' ? true : false}
           type="number"
           onChange={this.convertToGround}
@@ -66,12 +67,14 @@ class SpiceConverter extends React.Component {
         />
         <br />
         <Select
+          className="spice-selector"
           styles={customSelectStyles}
           onChange={this.selectSpice}
           options={options}
         ></Select>
         <EqualWrapper>=</EqualWrapper>
         <NumericalInput
+          className="ground-input"
           disabled={this.state.selectedSpice === '' ? true : false}
           type="number"
           onChange={this.convertToWhole}
