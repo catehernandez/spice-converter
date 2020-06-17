@@ -10,7 +10,7 @@ export const SpiceConverterContainer = styled.div`
   text-align: center;
   width: fit-content;
 
-  @media (min-width: 768px) {
+  @media (min-width: 576px) {
     flex-direction: row;
     top: 28%;
   }

@@ -6,7 +6,7 @@ const Wrapper = styled.div`
     font-weight: 700;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 576px) {
     float: right;
   }
 `;
