@@ -6,13 +6,16 @@ export const SpiceConverterContainer = styled.div`
   flex-direction: column;
   margin: 0 auto;
   position: relative;
-  top: 10%;
   text-align: center;
   width: fit-content;
 
   @media (min-width: 576px) {
     flex-direction: row;
-    top: 28%;
+  }
+
+  /* Position slightly off horizontal center on larger screens */
+  @media (min-width: 767px) {
+    margin-bottom: 10%;
   }
 `;
 

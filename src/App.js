@@ -13,7 +13,8 @@ const AppWrapper = styled.div`
 `;
 
 const Main = styled.main`
-  flex: 1 1 auto;
+  display: flex;
+  flex: 1;
 `;
 
 const App = () => {
