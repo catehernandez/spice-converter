@@ -3,13 +3,21 @@ import styled from 'styled-components';
 
 const HeaderWrapper = styled.header`
   flex: 0 1 auto;
-  margin: 1.5rem auto 0;
+  margin: 1rem auto; /* Horizontally center content */
   text-align: center;
-  max-width: 75%;
+  width: 85%;
+
+  @media (min-width: 767px) {
+    margin: 2rem auto; /* Horizontally center content */
+  }
 `;
 
 const Heading = styled.h1`
-  margin-bottom: 1rem;
+  margin: 0.75rem;
+
+  @media (min-width: 767px) {
+    margin: 1rem;
+  }
 `;
 
 const Tagline = styled.div`

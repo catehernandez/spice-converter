@@ -11,8 +11,14 @@ html {
 h1 {
   font-family: 'Libre Baskerville', serif;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 2rem;
   line-height: 1.2em;
+}
+
+@media (min-width: 767px) {
+  h1 {
+    font-size: 3rem;
+  }
 }
 
 a {
