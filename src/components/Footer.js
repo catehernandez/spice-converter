@@ -6,11 +6,6 @@ import Contact from './Contact';
 const FooterWrapper = styled.footer`
   margin: 1.5rem;
   font-size: 0.75rem;
-
-  @media (max-width: 767px) {
-    font-size: 0.65rem;
-    line-height: 1.3rem;
-  }
 `;
 
 const Footer = () => {
